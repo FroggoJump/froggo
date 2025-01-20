@@ -83,7 +83,7 @@ public class CameraFollow_DragAndShot : MonoBehaviour
     {
         targetPosition = cameraStartPos.position + offset;
         parent.position = new Vector3(targetPosition.x, parent.position.y, targetPosition.z);
-        FrogCentral.frog.GetComponent<Rigidbody>().velocity = Vector3.zero;
+        FrogCentral.frog.GetComponent<Rigidbody>().linearVelocity = Vector3.zero;
     }
 
     private void OnEnable()

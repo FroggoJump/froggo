@@ -42,7 +42,7 @@ public class FrogController : MonoBehaviour
 
     private void Update()
     {
-        if (start&& rb.velocity.magnitude <= 0.1&&!canJump)
+        if (start&& rb.linearVelocity.magnitude <= 0.1&&!canJump)
         {
             canJump = true; 
             DoFroggoLand();
@@ -152,7 +152,7 @@ public class FrogController : MonoBehaviour
             canJump = false;
             rb.transform.eulerAngles = new Vector3(this.transform.rotation.x, a, this.transform.rotation.z);
 
-            rb.velocity= (transform.TransformDirection(new Vector3((vo) * Mathf.Cos(45), (vo) * Mathf.Sin(45), 0)));
+            rb.linearVelocity= (transform.TransformDirection(new Vector3((vo) * Mathf.Cos(45), (vo) * Mathf.Sin(45), 0)));
             rb.transform.eulerAngles = new Vector3(this.transform.rotation.x, 0, this.transform.rotation.z);
             force = Vector3.zero;
             realForce=0;

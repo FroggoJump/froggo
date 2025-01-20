@@ -40,7 +40,7 @@ public class Pause : MonoBehaviour
     {
         Time.timeScale = 1f;
         FrogCentral.frog.gameObject.GetComponentInParent<Rigidbody>().useGravity = false;
-        FrogCentral.frog.gameObject.GetComponentInParent<Rigidbody>().velocity= Vector3.zero;
+        FrogCentral.frog.gameObject.GetComponentInParent<Rigidbody>().linearVelocity= Vector3.zero;
         ScreenManager.FadeScreen();
         GameStats.Instance.VirtualLevel = 1;
         Invoke("ChangeScene", 0.35f);
